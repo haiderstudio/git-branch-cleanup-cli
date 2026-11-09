@@ -73,6 +73,7 @@ python3 src/git_branch_cleanup.py --apply --include-unmerged --yes
 ## Example
 
 See `examples/` for a runnable walkthrough: it creates a throwaway repo with a merged branch and an unmerged branch, runs the dry run, then `--apply`, and shows that only the merged branch disappears. The same scenario is covered by the integration test, so the example and the tests cannot drift apart.
+
 ## How it is tested
 
 ```sh
