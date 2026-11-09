@@ -2,7 +2,7 @@
 
 Delete stale local git branches — gone on the remote, or fully merged — with a dry run first, always.
 
-[![CI](https://github.com/hai02487/git-branch-cleanup-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/hai02487/git-branch-cleanup-cli/actions/workflows/ci.yml) [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/haiderstudio/git-branch-cleanup-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/haiderstudio/git-branch-cleanup-cli/actions/workflows/ci.yml) [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-yellow.svg)](LICENSE)
 
 ## What it does
 
@@ -24,7 +24,7 @@ Over a project's life, local branches pile up: feature branches merged weeks ago
 No install step and no dependencies — Python 3.8+ and git are enough:
 
 ```sh
-git clone https://github.com/hai02487/git-branch-cleanup-cli.git
+git clone https://github.com/haiderstudio/git-branch-cleanup-cli.git
 cd git-branch-cleanup-cli
 python3 src/git_branch_cleanup.py --help
 ```
@@ -73,19 +73,3 @@ python3 src/git_branch_cleanup.py --apply --include-unmerged --yes
 ## Example
 
 See `examples/` for a runnable walkthrough: it creates a throwaway repo with a merged branch and an unmerged branch, runs the dry run, then `--apply`, and shows that only the merged branch disappears. The same scenario is covered by the integration test, so the example and the tests cannot drift apart.
-
-## How it is tested
-
-```sh
-python3 tests/test_git_branch_cleanup.py
-```
-
-Expected output: `All 5 tests passed.` The suite covers the classification rules (current branch never deleted, gone branches deletable, unmerged kept), the `: gone]` parsing, a real-repo dry-run-then-apply run, and refusal outside a git repo. Tests run on the exact files in this repo, with no network and no third-party packages.
-
-## Contributing
-
-Small, focused improvements are welcome. Open an issue first for anything larger than a typo, keep the safety rules above intact, and run the test suite before opening a pull request. See `CONTRIBUTING.md`.
-
-## Licence
-
-MIT — see `LICENSE`. Original work, written for this repo; it builds on git's own `--merged` and `-vv` output, not on any other cleanup tool's code.
