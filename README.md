@@ -47,10 +47,10 @@ Real output on a sample repo (see `examples/`):
 Current branch: main
 Local branches: 3
 Would delete:
- - done (merged)
+  - done (merged)
 Kept:
- - main (current branch)
- - wip (not merged and upstream still exists)
+  - main (current branch)
+  - wip (not merged and upstream still exists)
 Dry run: nothing deleted. Re-run with --apply to delete.
 ```
 
