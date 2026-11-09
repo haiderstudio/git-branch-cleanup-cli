@@ -21,7 +21,11 @@ Over a project's life, local branches pile up: feature branches merged weeks ago
 
 ## Install
 
-No install step and no dependencies — Python 3.8+ and git are enough:
+```sh
+pip install git-branch-cleanup-cli
+```
+
+Or clone from GitHub instead (Python 3.8+ and git are enough):
 
 ```sh
 git clone https://github.com/haiderstudio/git-branch-cleanup-cli.git
